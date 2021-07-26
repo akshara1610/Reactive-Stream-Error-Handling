@@ -41,7 +41,6 @@ public class TemperatureController {
                 //.onErrorMap(original-> new CustomeException("Some Error has occured in this step!"))
                 //.onErrorResume(ex->Flux.range(50000,10))
                 //.doOnError(ex->logger.error("We encountered some error at this step!",ex))
-                //.onErrorContinue((s)
                   .doFinally( i->{
                       if (SignalType.ON_ERROR.equals(i)) {
                           System.out.println("Completed with Error ");
